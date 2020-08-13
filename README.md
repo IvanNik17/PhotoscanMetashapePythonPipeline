@@ -8,10 +8,12 @@
  2. Filter errors in the sparse point cloud
  3. Setup accuracies for calculating the point cloud and mesh
  4. Extract dense points, normals, faces, color
- 5. Calculate the absolute scale of the 3D reconstruction from positioning data and calculate the uncertainty of the scale using the uncertainty of the positioning sensor using the method from the paper - Nikolov, I., & Madsen, C. B. (2019). Performance Characterization of Absolute Scale Computation for 3D Structure from Motion Reconstruction. In VISIGRAPP (5: VISAPP) (pp. 884-891).
+ 5. Calculate the absolute scale of the 3D reconstruction from positioning data and calculate the uncertainty of the scale using the uncertainty of the positioning sensor using the method from the paper - **Nikolov, I., & Madsen, C. B. (2019). Performance Characterization of Absolute Scale Computation for 3D Structure from Motion Reconstruction. In VISIGRAPP (5: VISAPP) (pp. 884-891)**.
  6. Slice the 3D reconstruction in 2D chunks if needed for additional processing
  
  
 # Requirements
 
 The code requires Numpy and subprocess libraries
+
+The path to the Photoscan/Metashape exe needs to be specified as a complete string. The images for 3D reconstruction need to be added to the images folder. The slices are saved in the slices folder. If you want to save the 3D surface, you need to add a **numpy.savetxt** or equivalent and save the data that comes from the slave process
